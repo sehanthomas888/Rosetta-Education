@@ -165,7 +165,9 @@ window.LESSONS = window.LESSONS || [];
 <tr><td>−1.0</td><td>8.4%</td><td>Maximum benefit (with other weights it could reach 0)</td></tr>
 </tbody></table>
 <p>Only when ρ = +1 does portfolio volatility equal the simple weighted average. For any ρ &lt; 1 it is <em>lower</em>, while expected return remains the weighted average (6% in the example). That gap is the closest thing finance has to a free lunch. The widget below has a <b>Show the math</b> panel that computes these three terms as you move the sliders.</p>
+<p>At the extreme ρ = −1, the three-part variance formula collapses to just (w·σ<sub>A</sub> − (1−w)·σ<sub>B</sub>)² (the "teamwork" term becomes a perfect match for the two "own risk" terms, so they combine into one squared difference instead of three separate pieces). Volatility is the square root of that, so it hits exactly zero when the two pieces inside are equal: w·σ<sub>A</sub> = (1−w)·σ<sub>B</sub>. Solving for w gives the zero-risk weight: <b>w = σ<sub>B</sub> ÷ (σ<sub>A</sub> + σ<sub>B</sub>)</b>, so the riskier asset always gets the smaller weight.</p>
 <details class="pause"><summary>Pause and try: which ρ helps most?</summary><p>The lowest one. Every step from +1 towards −1 shrinks the teamwork term, so risk falls. ρ = −1 gives the largest reduction.</p></details>
+<details class="pause"><summary>Pause and try: the zero-risk weight</summary><p>σ<sub>A</sub> = 20%, σ<sub>B</sub> = 10%, ρ = −1. w = 10 ÷ (20 + 10) = <b>33.3%</b> in A, 66.7% in B. Check: 0.333 × 20 = 6.67, and 0.667 × 10 = 6.67. They match, so volatility is zero.</p></details>
 
 <h2>Two kinds of risk</h2>
 <ul>
